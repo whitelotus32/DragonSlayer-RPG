@@ -167,7 +167,11 @@ function attack() {
     // Subtract the monster's level from health
     health -= monsters[fighting].level; 
     // Subtract the power of the player's current weapon and a random number between 1 and xp from monsterHealth
-    monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1; 
+    monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
+
+    // Update healthText and monsterHealthText to reflect the new health and monsterHealth values
+    healthText.innerText = health;
+    monsterHealthText.innerText = monsterHealth;
 }
 
 function dodge() {
