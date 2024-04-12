@@ -172,6 +172,11 @@ function attack() {
     // Update healthText and monsterHealthText to reflect the new health and monsterHealth values
     healthText.innerText = health;
     monsterHealthText.innerText = monsterHealth;
+
+    // Check if player's health is less than or equal to 0
+    if (health <= 0) {
+        lose(); // Call the lose function if health is less than or equal to 0
+    }
 }
 
 function dodge() {
